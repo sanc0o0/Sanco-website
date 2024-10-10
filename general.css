@@ -1,0 +1,19 @@
+p {
+    font-family: Roboto, Arial;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgb(0, 0, 0);
+}
+
+
+.body{
+    margin: 0;
+    padding-top: 60px;
+    padding-left: 75px;
+    background-color: rgb(248, 247, 247);
+}
+.video-grid{
+    padding: 20px;
+
+}
+

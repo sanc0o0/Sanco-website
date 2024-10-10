@@ -1,0 +1,224 @@
+ .header {
+    display: flex;
+    height: 55px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+    border-bottom: 1px  solid  rgb(221, 221, 221);
+    z-index: 100;
+ }
+ 
+ .left-section{
+    align-items: center;
+    display: flex;
+ }
+
+ .hamburger-menu{
+   height: 24px;
+   margin-left: 24px;
+   margin-right: 24px; 
+   display: block;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   transition: padding 0.10s;
+   cursor: pointer;
+}
+
+
+
+.youtube-logo{
+   height: 20px;
+   cursor: pointer;
+   
+}
+
+ .middle-section{
+    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-left: 60px;
+    margin-right: 35px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    
+ }
+ .search-bar::placeholder{
+   font-family: Roboto, Arial;
+   font-size: 16px;
+ }
+ .search-bar{
+   flex: 1;
+   height: 36px;
+   border-width: 1px;
+   border-style: solid;
+   margin-right: -1px;
+   border-color: #cccccc;
+   border-top-left-radius: 25px;
+   border-bottom-left-radius: 25px;
+   padding: 1px 2px 1px 12px ;
+   font-family :Roboto, Arial, sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.05);
+   width:0 ;
+   min-width: 0;
+   
+ }
+ .search-icon{
+   height: 25px;
+   width: 300px;
+   align-items: center;
+   margin-top: 6px;
+   vertical-align: middle;
+ }                    
+ .search-button{
+   height: 39px;
+   width: 64px;
+   background-color: #f7f7f7;
+   border-width: 1px;
+   border-style: solid;
+   border-color: #cccccc;
+   border-top-right-radius: 25px;
+   border-bottom-right-radius: 25px;
+   padding: 1px 6px 1px 6px ;
+   display: flex;
+   font-weight: 400;
+   justify-content: center;
+   margin-right: 8px;
+   cursor: pointer;
+   }
+
+ .search-button, .voice-search-button, .tooltip-container{
+  position: relative;
+ }
+ .search-button .tooltip,
+ .voice-search-button .tooltip,
+ .tooltip-container .tooltip{
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding: 8px 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-family: Arial,Roboto;
+  font-weight: 400;
+  bottom: -45px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+  cursor: pointer;
+ }
+ .search-button:hover .tooltip,
+ .voice-search-button:hover .tooltip,
+ .tooltip-container:hover .tooltip{
+  opacity: 1;
+  
+ }
+ 
+ .voice-search-button{
+   background-color: #f8f8f8;
+   height: 40px;
+   width: 40px;
+   border: none;
+   display: flex;
+   flex-shrink: 0;
+   justify-content: center;
+   border-radius: 25px;
+   align-items: center;
+   padding: 1px 6px 1px 6px;
+   position: relative;
+   cursor: pointer;
+ }
+ .voice-search-icon{
+   height: 25px;
+ }
+ 
+ .right-section{
+   width: 182px;
+   display: flex;
+   align-items: center;
+   margin-left: 29px;
+   margin-right: 24px;
+   justify-content: space-between;
+   flex-shrink: 0;
+   transition: 0.10s ; /* Smooth transition for right section */
+ }
+ .tooltip-container {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+ }
+ .create, .yt-apps{
+   height: 24px;
+   justify-content: center;
+   cursor: pointer;
+ }
+ .notifications-icon-container{
+   position: relative;
+   margin: 24px;
+   
+ }
+ .notifications{
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;cursor: pointer;
+ }
+ .notifications-count{
+  position: absolute;
+  top: -4px;
+  left: 12px;
+  display: inline-block;
+  background-color: #c00;
+  color: white;
+  font-family: Roboto, Arial;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 22px;
+  padding: 0px 4px 0px 4px;
+  min-width: 8px;
+  max-width: 18px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+ }
+ .user-pfp{
+   border-radius: 100%;
+   height: 30px;
+   width: 30px;
+   margin-left: 10px;
+   cursor: pointer;
+ }
+
+.notification-no{
+  position: relative;
+}
+ .ntfctn-count{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  border-radius: 50%;
+  padding: 1px 5px 1px 5px;
+  font-size: 12px;
+  font-family: Roboto, Arial;
+  font-weight: 500;
+  color: white;
+  
+ }
+
+ @media (max-width: 600px) {
+  .right-section {
+      display: none;
+      opacity: 0; /* Hide the section smoothly */
+      pointer-events: none; /* Disable interactions */
+  }
+}
